@@ -18,6 +18,7 @@ else
   STDERR.puts "!!! Unexpected arguments specified, please provide the correct arguments below  !!!" if ARGV.length > 2
   # use Readline to enable tab completion of filenames
   request_filename = Readline.readline("Please enter the file name which contains the json request:  ", false)
+  request_filename.strip!
 
   STDERR.print "Please enter the URL for the scrimp server [#{DEFAULT_SCRIMP_HOST}]:  "
   scrimp_url = gets.chomp
